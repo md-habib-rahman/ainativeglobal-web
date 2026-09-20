@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "date": "28 JAN 2026",
+    "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop",
+    "authorImage": "https://i.pravatar.cc/150?img=11",
+    "authorName": "Rafid Hasan",
+    "authorRole": "AI Educator",
+    "title": "10 In-Demand AI Skills for a Future-Ready Career",
+    "description": "Discover the most valuable AI skills in 2026 and how to start building them today."
+  },
+  {
+    "id": 2,
+    "date": "29 JAN 2026",
+    "image": "https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=600&auto=format&fit=crop",
+    "authorImage": "https://i.pravatar.cc/150?img=5",
+    "authorName": "Nusrat Jahan",
+    "authorRole": "Productivity Coach",
+    "title": "Top AI Tools to Supercharge Your Productivity",
+    "description": "A curated list of AI tools that can help you work faster, smarter and achieve more."
+  },
+  {
+    "id": 3,
+    "date": "30 JAN 2026",
+    "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=600&auto=format&fit=crop",
+    "authorImage": "https://i.pravatar.cc/150?img=8",
+    "authorName": "Kazi Mahir",
+    "authorRole": "AI Strategist",
+    "title": "How AI is Changing the Future of Work",
+    "description": "From automation to new opportunities — explore how AI is reshaping careers across industries."
+  },
+  {
+    "id": 4,
+    "date": "02 FEB 2026",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
+    "authorImage": "https://i.pravatar.cc/150?img=32",
+    "authorName": "Sarah Lin",
+    "authorRole": "Machine Learning Engineer",
+    "title": "Building Scalable AI Architectures",
+    "description": "Learn the core principles of deploying machine learning models that can serve millions of users efficiently."
+  },
+  {
+    "id": 5,
+    "date": "05 FEB 2026",
+    "image": "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=600&auto=format&fit=crop",
+    "authorImage": "https://i.pravatar.cc/150?img=12",
+    "authorName": "David Chen",
+    "authorRole": "Automation Expert",
+    "title": "The Rise of Autonomous AI Agents",
+    "description": "How self-prompting AI agents are taking over routine administrative tasks and complex workflows."
+  },
+  {
+    "id": 6,
+    "date": "10 FEB 2026",
+    "image": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=600&auto=format&fit=crop",
+    "authorImage": "https://i.pravatar.cc/150?img=44",
+    "authorName": "Elena Rostova",
+    "authorRole": "Ethics Researcher",
+    "title": "Navigating the Ethics of Generative AI",
+    "description": "A deep dive into the ethical landscape of AI in 2026, focusing on copyright, bias, and transparency."
+  }
+]
