@@ -10,7 +10,7 @@ import {
   FaLayerGroup,
   FaChartPie,
 } from "react-icons/fa6";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 import { BrandButton } from "@/components/common/BrandButton";
 import { BrandBadge } from "@/components/common/BrandBadge";
 
@@ -141,7 +141,11 @@ export function HeroSlideTwoClient() {
                 Start a Project
               </BrandButton>
 
-              <button type="button" className="flex items-center gap-3 group">
+              <button
+                type="button"
+                className="flex items-center gap-3 group"
+                onClick={() => redirect("/#video-grow-section")}
+              >
                 <div className="flex items-center justify-center w-12 h-12 shrink-0 rounded-full border border-slate-300 text-[#1D4ED8] group-hover:border-[#1D4ED8] transition-colors bg-white shadow-sm">
                   <FaPlay className="w-3.5 h-3.5 ml-1" />
                 </div>

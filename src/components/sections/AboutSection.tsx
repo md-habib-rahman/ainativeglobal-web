@@ -204,12 +204,12 @@ export function AboutSection() {
                 variant="cyan-emerald"
               />
             </div>
-            <BrandButton
+            {/* <BrandButton
               onClick={() => window.open("/about", "_self")}
               icon={<FaArrowRight className="w-4 h-4" />}
             >
               Learn More
-            </BrandButton>
+            </BrandButton> */}
           </motion.div>
         </div>
       </div>

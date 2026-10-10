@@ -35,6 +35,7 @@ export function VideoGrow() {
   return (
     <section
       ref={containerRef}
+	  id="video-grow-section"
       className="relative w-full py-24 md:py-32 bg-slate-50 flex items-center justify-center overflow-hidden"
     >
       {/* Light Theme Background Ambience */}
@@ -53,7 +54,7 @@ export function VideoGrow() {
         {/* Active Video Player */}
         <video
           ref={videoRef}
-          src="https://test-streams.mux.dev/x36xhzz/x36.m3u8"
+          src="https://techbita.com/wp-content/uploads/2026/10/ai_native_global_brand_video.mp4"
           muted
           loop
           playsInline

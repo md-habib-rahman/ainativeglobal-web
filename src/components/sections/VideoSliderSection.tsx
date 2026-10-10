@@ -7,9 +7,9 @@ import { Play, ChevronLeft, ChevronRight } from "lucide-react";
 
 // Placeholder images for the right-column slider
 const SLIDER_IMAGES = [
-  "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=800&auto=format&fit=crop",
+  "https://res.cloudinary.com/vx7dgbed/image/upload/v1791628972/flash_1.jpg",
+  "https://res.cloudinary.com/vx7dgbed/image/upload/v1791628971/flash_2.jpg",
+  "https://res.cloudinary.com/vx7dgbed/image/upload/v1791628972/flash_3.jpg",
 ];
 
 export function VideoSliderSection() {
@@ -119,7 +119,7 @@ export function VideoSliderSection() {
             ) : (
               /* Active Video Player */
               <video
-                src="https://test-streams.mux.dev/x36xhzz/x36.m3u8"
+                src="https://techbita.com/wp-content/uploads/2026/10/ai_native_global_brand_video.mp4"
                 controls
                 autoPlay
                 className="w-full h-full object-cover outline-none"

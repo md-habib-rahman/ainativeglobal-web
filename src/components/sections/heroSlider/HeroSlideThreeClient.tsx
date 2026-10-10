@@ -109,13 +109,13 @@ export function HeroSlideThreeClient() {
           {/* CTA Button */}
           <div className="pt-2 w-full sm:w-auto">
             <BrandButton
-              onClick={() => window.open("/solutions", "_self")}
+              onClick={() => window.open("/services", "_self")}
               variant="primary"
               icon={<FaArrowRight className="w-4 h-4" />}
               className="w-full sm:w-auto justify-center"
             >
               Explore AI Content Solutions
-            </BrandButton>
+		</BrandButton>
           </div>
         </motion.div>
       </div>

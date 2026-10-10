@@ -51,9 +51,9 @@ const quickLinks = [
   { name: "Success Stories", href: "/success-stories" },
   { name: "Careers", href: "/careers" },
   { name: "Contact Us", href: "/contact" },
-  { name: "Privacy Policy", href: "/privacy-policy" },
-  { name: "Terms of Service", href: "/terms-of-service" },
-  { name: "FAQ's", href: "/faqs" },
+  //   { name: "Privacy Policy", href: "/privacy-policy" },
+  //   { name: "Terms of Service", href: "/terms-of-service" },
+  //   { name: "FAQ's", href: "/faqs" },
 ];
 
 const recentPosts = [

@@ -18,7 +18,8 @@ export function HeroSlideFourClient() {
   const gradientBorderStyle: CSSProperties = {
     padding: 2,
     background: "linear-gradient(to right, #1D4ED8, #00D4FF, #00E676)",
-    WebkitMask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
+    WebkitMask:
+      "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
     mask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
     WebkitMaskComposite: "xor",
     maskComposite: "exclude",
@@ -52,10 +53,12 @@ export function HeroSlideFourClient() {
           <GoDotFill color="#1D4ED8" className="w-4 h-4 shrink-0" /> AI Strategy
         </span>
         <span className="inline-flex items-center gap-1.5 font-semibold">
-          <GoDotFill color="#00D4FF" className="w-4 h-4 shrink-0" /> Intelligent Automation
+          <GoDotFill color="#00D4FF" className="w-4 h-4 shrink-0" /> Intelligent
+          Automation
         </span>
         <span className="inline-flex items-center gap-1.5 font-semibold">
-          <GoDotFill color="#00E676" className="w-4 h-4 shrink-0" /> Business Innovation
+          <GoDotFill color="#00E676" className="w-4 h-4 shrink-0" /> Business
+          Innovation
         </span>
       </div>
 
@@ -65,16 +68,16 @@ export function HeroSlideFourClient() {
           <FaCalendarDays className="text-[#1D4ED8] w-4 h-4 shrink-0" />
           <span>24 October 2026</span>
         </div>
-        
+
         <div className="w-px h-5 bg-slate-300 hidden sm:block" />
-        
+
         <div className="flex items-center gap-2.5">
           <FaClock className="text-[#1D4ED8] w-4 h-4 shrink-0" />
           <span>7:30 PM (BD Time)</span>
         </div>
-        
+
         <div className="w-px h-5 bg-slate-300 hidden sm:block" />
-        
+
         <div className="flex items-center gap-2.5">
           <FaLaptop className="text-[#1D4ED8] w-4 h-4 shrink-0" />
           <span>Online Webinar</span>
@@ -87,6 +90,12 @@ export function HeroSlideFourClient() {
           variant="primary"
           icon={<FaArrowRight className="w-4 h-4" />}
           className="w-full sm:w-auto justify-center"
+          onClick={() =>
+            window.open(
+              "https://docs.google.com/forms/d/e/1FAIpQLSfcUyj6bynx62Zemyyl8MFYpvpVTF6h0APXW59zqmMXBCMv5g/viewform",
+              "_blank",
+            )
+          }
         >
           Register Now
         </BrandButton>
