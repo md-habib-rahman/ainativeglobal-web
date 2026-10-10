@@ -15,6 +15,7 @@ import { BrandButton } from "@/components/common/BrandButton";
 import { cn } from "@/lib/utils";
 import { BrandBadge } from "../common/BrandBadge";
 import { TbTargetArrow } from "react-icons/tb";
+import Link from "next/link";
 
 const carouselCards = [
   {
@@ -169,15 +170,15 @@ export function WhyChooseUsSection() {
             className="lg:col-span-3 flex flex-col gap-6 relative z-20"
           >
             <div className="flex items-center gap-3">
-            
-			  <BrandBadge text="Why Choose Us" icon={<TbTargetArrow  className="w-5 h-5" />}/>
-            
+              <BrandBadge
+                text="Why Choose Us"
+                icon={<TbTargetArrow className="w-5 h-5" />}
+              />
             </div>
 
             <h2 className="font-outfit text-4xl md:text-5xl font-extrabold text-[#0B1221] leading-[1.1] tracking-tight">
               A Different <br />
-              Tomorrow 
-              with{" "}
+              Tomorrow with{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1D4ED8] via-[#00D4FF] to-[#00E676]">
                 AI
               </span>
@@ -190,7 +191,11 @@ export function WhyChooseUsSection() {
             </p>
 
             <div className="pt-4">
-              <BrandButton icon={<FaArrowRight className="w-4 h-4" />}>
+              <BrandButton
+                icon={<FaArrowRight className="w-4 h-4" />}
+                onClick={() => window.open("/services", "_self")}
+                variant="primary"
+              >
                 Learn More
               </BrandButton>
             </div>
@@ -262,7 +267,12 @@ export function WhyChooseUsSection() {
                       </p>
 
                       <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#00D4FF] to-[#00E676] flex items-center justify-center text-white self-end transition-transform duration-300 group-hover/card:scale-110 shadow-md shadow-[#00D4FF]/30">
-                        <FaArrowRight className="w-4 h-4" />
+                        <Link
+                          href={`/services#feature-${card.id}`}
+                          className="flex items-center justify-center w-full h-full"
+                        >
+                          <FaArrowRight className="w-4 h-4" />
+                        </Link>
                       </div>
                     </div>
                   </div>

@@ -12,24 +12,32 @@ import {
   FaLightbulb,
   FaUsers,
 } from "react-icons/fa6"; // Standardized to fa6 for the latest icons
+import { useRouter } from "next/navigation";
 
-export function HeroSection() {
+export function HeroSlideOne() {
+  const router = useRouter();
+
+  const handleGetStartedClick = () => {
+    const location = "/contact";
+    router.push(location);
+  };
+
   return (
-    <section className="relative w-full min-h-[85vh] md:min-h-[90vh] flex items-start lg:items-center overflow-hidden bg-slate-50 pt-28 lg:pt-0 pb-36 lg:pb-0">
+    <section className="relative w-full min-h-[80vh] md:min-h-[90vh] flex items-start lg:items-center overflow-hidden bg-slate-50 pt-28 lg:pt-0 pb-36 lg:pb-0">
       {/* 1. Main Hero Image */}
       {/* Responsive adjustments: Adjusted height/width on mobile so it doesn't overlap text unreadably */}
       <motion.div
         initial={{ opacity: 0, scale: 0.95, x: 50 }}
         animate={{ opacity: 1, scale: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.2, type: "spring" }}
-        className="absolute bottom-0 right-0 z-10 w-[95%] sm:w-[80%] md:w-[70%] lg:w-[55%] h-[50%] sm:h-[60%] lg:h-[85%] pointer-events-none"
+        className="absolute bottom-0 right-0 z-10 w-[95%] sm:w-[80%] md:w-[70%] lg:w-[55%] h-[50%] sm:h-[60%] lg:h-[85%] pointer-events-none border"
       >
         <Image
-          src="https://res.cloudinary.com/vx7dgbed/image/upload/v1789373266/Final_hero_ainativeglobal.png"
+          src="https://res.cloudinary.com/vx7dgbed/image/upload/v1791471531/b9376a72-3b5d-4f46-b9b5-de3d629f23cc.png"
           alt="AiNativeGlobal Hero Model"
           fill
           priority
-          className="object-contain scale-120 bottom-5 md:scale-100 lg:object-cover md:object-bottom-right" // Fixed Tailwind syntax
+          className="object-contain scale-120 bottom-0 md:scale-100 lg:object-cover md:object-bottom-right" // Fixed Tailwind syntax
         />
       </motion.div>
 
@@ -74,13 +82,14 @@ export function HeroSection() {
 
             <div className="flex flex-wrap items-center gap-6 pt-4">
               <BrandButton
+                onClick={handleGetStartedClick}
                 variant="primary"
                 icon={<ArrowRight className="w-5 h-5" />}
               >
                 Get Started
               </BrandButton>
 
-              <div className="flex items-center gap-4">
+              {/* <div className="flex items-center gap-4">
                 <div className="flex -space-x-3">
                   {[1, 2, 3].map((i) => (
                     <div
@@ -104,7 +113,7 @@ export function HeroSection() {
                     Students Learning
                   </span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </motion.div>
 

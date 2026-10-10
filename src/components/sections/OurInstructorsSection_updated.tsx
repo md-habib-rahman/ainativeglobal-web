@@ -114,8 +114,8 @@ export function OurInstructorsSectionUpdated() {
       id="instructors"
     >
       {/* Background Ambience */}
-      <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-gradient-to-bl from-[#00D4FF]/5 to-transparent rounded-bl-full pointer-events-none blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-[50%] h-[50%] bg-gradient-to-tr from-[#1D4ED8]/5 to-transparent pointer-events-none blur-3xl" />
+      <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-linear-to-bl from-[#00D4FF]/5 to-transparent rounded-bl-full pointer-events-none blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-[50%] h-[50%] bg-linear-to-tr from-[#1D4ED8]/5 to-transparent pointer-events-none blur-3xl" />
 
       <div className="container relative z-10 mx-auto px-4 md:px-8">
         {/* Header Area */}
@@ -137,7 +137,7 @@ export function OurInstructorsSectionUpdated() {
               Learn from AI Experts. <br />
               Build Skills for
               <span> </span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1D4ED8] via-[#00D4FF] to-[#00E676]">
+              <span className="text-transparent bg-clip-text bg-gralineardient-to-r from-[#1D4ED8] via-[#00D4FF] to-[#00E676]">
                 What's Next.
               </span>
             </h2>
@@ -185,7 +185,7 @@ export function OurInstructorsSectionUpdated() {
                 <Link
                   href={`/instructors/${slug}`}
                   aria-label={`View ${instructor.name}'s profile`}
-                  className="group relative block h-full rounded-2xl p-[2px] shadow-lg shadow-slate-200/40 transition-shadow duration-300 hover:shadow-xl hover:shadow-[#00D4FF]/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00D4FF]"
+                  className="group relative block h-full rounded-2xl p-0.5 shadow-lg shadow-slate-200/40 transition-shadow duration-300 hover:shadow-xl hover:shadow-[#00D4FF]/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00D4FF]"
                 >
                   {/* Glow layer: blurred copy of the traveling gradient */}
                   <span
@@ -221,7 +221,7 @@ export function OurInstructorsSectionUpdated() {
                   <div className="relative flex h-full flex-col rounded-[14px] border border-slate-100 bg-white p-3">
                     {/* Image Container */}
                     <div
-                      className={`relative mb-3 aspect-[4/3] w-full overflow-hidden rounded-xl ${instructor.theme.bg}`}
+                      className={`relative mb-3 aspect-4/3 w-full overflow-hidden rounded-xl ${instructor.theme.bg}`}
                     >
                       <Image
                         src={instructor.image}
@@ -243,7 +243,7 @@ export function OurInstructorsSectionUpdated() {
                     </div>
 
                     {/* Content */}
-                    <div className="flex flex-grow flex-col px-1">
+                    <div className="flex grow flex-col px-1">
                       <h3 className="truncate font-outfit text-lg font-bold leading-tight text-slate-900">
                         {instructor.name}
                       </h3>
@@ -262,7 +262,7 @@ export function OurInstructorsSectionUpdated() {
                         ))}
                       </div>
 
-                      <p className="mb-4 line-clamp-2 flex-grow font-sans text-[12px] leading-snug text-slate-600">
+                      <p className="mb-4 line-clamp-2 grow font-sans text-[12px] leading-snug text-slate-600">
                         {instructor.bio}
                       </p>
 

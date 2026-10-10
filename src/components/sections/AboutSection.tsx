@@ -13,12 +13,14 @@ import {
   FaAlignLeft,
   FaChartSimple,
   FaVideo,
+  FaArrowRight,
 } from "react-icons/fa6";
 import { useEffect } from "react";
 import { BrandBadge } from "@/components/common/BrandBadge";
 import { FloatingFeatureCard } from "@/components/common/FloatingFeatureCard";
 import { ActionCard } from "../common/actionCard";
 import { FaInfoCircle } from "react-icons/fa";
+import { BrandButton } from "../common/BrandButton";
 
 // angle = position on the ring in degrees (0° = right, 90° = bottom, clockwise)
 const orbitCards = [
@@ -179,7 +181,7 @@ export function AboutSection() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               <ActionCard
                 title="Academy"
-                subtitle="Build AI skills for the future"
+                subtitle="Build future AI skills"
                 icon={<FaGraduationCap className="w-5 h-5 md:w-6 md:h-6" />}
                 variant="blue-cyan"
               />
@@ -202,6 +204,12 @@ export function AboutSection() {
                 variant="cyan-emerald"
               />
             </div>
+            <BrandButton
+              onClick={() => window.open("/about", "_self")}
+              icon={<FaArrowRight className="w-4 h-4" />}
+            >
+              Learn More
+            </BrandButton>
           </motion.div>
         </div>
       </div>

@@ -2,13 +2,14 @@
 
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
-import { motion,Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { BrandBadge } from "@/components/common/BrandBadge";
 import { BrandButton } from "@/components/common/BrandButton";
 import { cn } from "@/lib/utils";
 import { RiArticleFill } from "react-icons/ri";
+import { redirect } from "next/navigation";
 
 interface BlogPost {
   id: number;
@@ -31,10 +32,10 @@ const containerVariants: Variants = {
 
 const cardVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { type: "spring", stiffness: 100, damping: 15 } 
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 100, damping: 15 },
   },
 };
 
@@ -156,6 +157,7 @@ export function BlogSection() {
               variant="gradient_outline"
               icon={<ArrowRight className="w-4 h-4" />}
               className="bg-[#00D4FF]/10 border-0 text-[#1D4ED8] hover:bg-[#00D4FF]/20 shadow-none px-6 py-5"
+              onClick={() => redirect("/blogs")}
             >
               View All Blogs
             </BrandButton>
@@ -234,7 +236,7 @@ export function BlogSection() {
 
                     {/* Continue Reading Button */}
                     <button className="self-start px-5 py-2.5 bg-gradient-to-r from-[#1D4ED8] via-[#00D4FF] to-[#00E676] text-white rounded-full text-xs font-bold flex items-center gap-2 transition-transform hover:scale-105 shadow-md shadow-[#00D4FF]/20">
-                      Continue Reading
+                      Upcomming...
                       <ArrowRight className="w-3.5 h-3.5" />
                     </button>
                   </div>

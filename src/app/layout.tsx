@@ -3,6 +3,7 @@ import { Outfit, Open_Sans } from "next/font/google";
 import "./globals.css";
 import { TopNav } from "@/components/layout/TopNav";
 import { Footer } from "@/components/layout/Footer";
+import { FloatingSocials } from "@/components/common/FloatingSocials";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -80,6 +81,7 @@ export default function RootLayout({
     <html lang="en" className={`${outfit.variable} ${openSans.variable}`}>
       <body className="font-sans antialiased text-slate-900 bg-slate-50 selection:bg-cyan-500/30">
         <TopNav />
+        <FloatingSocials />
         <main className="overflow-hidden">{children}</main>
         <Footer />
       </body>

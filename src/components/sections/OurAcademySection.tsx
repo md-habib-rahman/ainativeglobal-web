@@ -25,6 +25,7 @@ import {
   FaUserGroup,
 } from "react-icons/fa6";
 import { BrandBadge } from "@/components/common/BrandBadge";
+import Link from "next/link";
 
 const academyCategories = [
   {
@@ -132,42 +133,47 @@ function CategoryCard({
       whileTap={{ scale: 0.97 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       onMouseMove={handleMouseMove}
-      className="group relative flex cursor-pointer items-center justify-between overflow-hidden rounded-full border border-[#00D4FF]/10 bg-gradient-to-r from-[#1D4ED8]/[0.03] to-[#00D4FF]/[0.05] p-3 pr-5 transition-[border-color,box-shadow] duration-300 hover:border-[#00D4FF]/40 hover:shadow-lg hover:shadow-[#00D4FF]/15"
+      className="group relative flex cursor-pointer items-center justify-between overflow-hidden rounded-full border border-[#00D4FF]/10 bg-linear-to-r from-[#1D4ED8]/3 to-[#00D4FF]/5 p-3 pr-5 transition-[border-color,box-shadow] duration-300 hover:border-[#00D4FF]/40 hover:shadow-lg hover:shadow-[#00D4FF]/15"
     >
-      {/* Fill sweep: gradient wipes in from the left on hover */}
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 origin-left scale-x-0 bg-gradient-to-r from-[#1D4ED8]/10 to-[#00D4FF]/15 transition-transform duration-500 ease-out group-hover:scale-x-100"
-      />
+      <Link
+        href={`/academy/${category.title.toLowerCase().replace(/\s+/g, "-")}`}
+        className="flex w-full items-center gap-4"
+      >
+        {/* Fill sweep: gradient wipes in from the left on hover */}
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 origin-left scale-x-0 bg-linear-to-r from-[#1D4ED8]/10 to-[#00D4FF]/15 transition-transform duration-500 ease-out group-hover:scale-x-100"
+        />
 
-      {/* Cursor spotlight */}
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-        style={{
-          background:
-            "radial-gradient(180px circle at var(--x, 50%) var(--y, 50%), rgba(0,212,255,0.22), transparent 70%)",
-        }}
-      />
+        {/* Cursor spotlight */}
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          style={{
+            background:
+              "radial-gradient(180px circle at var(--x, 50%) var(--y, 50%), rgba(0,212,255,0.22), transparent 70%)",
+          }}
+        />
 
-      {/* min-w-0 lets the text truncate without needing overflow-hidden here */}
-      <div className="relative flex min-w-0 items-center gap-4">
-        {/* Icon circle: the glow ring is a box-shadow, so it always follows the round shape */}
-        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-[#1D4ED8] shadow-sm transition-all duration-300 group-hover:rotate-[12deg] group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-[#1D4ED8] group-hover:to-[#00D4FF] group-hover:text-white group-hover:shadow-[0_0_0_5px_rgba(0,212,255,0.2)]">
-          <Icon className="h-5 w-5" />
+        {/* min-w-0 lets the text truncate without needing overflow-hidden here */}
+        <div className="relative flex min-w-0 items-center gap-4">
+          {/* Icon circle: the glow ring is a box-shadow, so it always follows the round shape */}
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-[#1D4ED8] shadow-sm transition-all duration-300 group-hover:rotate-12 group-hover:scale-110 group-hover:bg-linear-to-br group-hover:from-[#1D4ED8] group-hover:to-[#00D4FF] group-hover:text-white group-hover:shadow-[0_0_0_5px_rgba(0,212,255,0.2)]">
+            <Icon className="h-5 w-5" />
+          </div>
+
+          <div className="flex min-w-0 flex-col items-start truncate">
+            <span className="w-full truncate font-outfit text-[15px] font-bold leading-tight text-[#1D4ED8]">
+              {category.title}
+            </span>
+            <span className="mt-0.5 w-full truncate font-sans text-[11px] font-medium text-slate-500">
+              {category.subtitle}
+            </span>
+          </div>
         </div>
 
-        <div className="flex min-w-0 flex-col items-start truncate">
-          <span className="w-full truncate font-outfit text-[15px] font-bold leading-tight text-[#1D4ED8]">
-            {category.title}
-          </span>
-          <span className="mt-0.5 w-full truncate font-sans text-[11px] font-medium text-slate-500">
-            {category.subtitle}
-          </span>
-        </div>
-      </div>
-
-      <ArrowRight className="relative ml-2 h-4 w-4 shrink-0 text-[#1D4ED8]/40 transition-all duration-300 group-hover:translate-x-1.5 group-hover:text-[#1D4ED8]" />
+        <ArrowRight className="relative ml-2 h-4 w-4 shrink-0 text-[#1D4ED8]/40 transition-all duration-300 group-hover:translate-x-1.5 group-hover:text-[#1D4ED8]" />
+      </Link>
     </motion.div>
   );
 }
