@@ -1,11 +1,9 @@
 import { AboutSection } from "@/components/sections/AboutSection";
 import { BlogSection } from "@/components/sections/BlogSection";
-import { CtaSection } from "@/components/sections/CtaSection.tsx";
+import { CtaSection } from "@/components/sections/CtaSection";
 
 import { HeroSlider } from "@/components/sections/heroSlider/HeroSlider";
 import { OurAcademySection } from "@/components/sections/OurAcademySection";
-import { OurInstructorsSectionUpdated } from "@/components/sections/OurInstructorsSection_updated";
-import { PartnersSection } from "@/components/sections/PartnersSection";
 import { VideoGrow } from "@/components/sections/VideoGrow";
 import { VideoSliderSection } from "@/components/sections/VideoSliderSection";
 import { WhyChooseUsSection } from "@/components/sections/WhyChooseUsSection";

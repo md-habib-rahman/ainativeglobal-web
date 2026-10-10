@@ -13,7 +13,10 @@ const navLinks = [
   { name: "SERVICE", href: "/services" },
 
   //   { name: "BLOG", href: "/blog" },
-  { name: "SEMINAR", href: "/seminars" },
+  {
+    name: "SEMINAR",
+    href: "https://docs.google.com/forms/d/e/1FAIpQLSfcUyj6bynx62Zemyyl8MFYpvpVTF6h0APXW59zqmMXBCMv5g/viewform?usp=dialog",
+  },
   { name: "CONTACT", href: "/contact" },
 ];
 
@@ -108,10 +111,10 @@ export function TopNav() {
                   </div>{" "}
                   <div className="flex flex-col leading-tight">
                     <span className="text-[11px] font-sans text-slate-500 uppercase tracking-wider font-semibold">
-                      Book a Call
+                      Book a Meeting
                     </span>
                     <span className="font-outfit font-bold text-slate-900 text-sm">
-                      01715983652
+                      +8801711090585
                     </span>
                   </div>
                 </div>
@@ -167,10 +170,10 @@ export function TopNav() {
                   </div>
                   <div className="flex flex-col leading-tight">
                     <span className="text-[11px] font-sans text-slate-500 uppercase tracking-wider font-semibold">
-                      Book a Call
+                      Book a Meeting
                     </span>
                     <span className="font-outfit font-bold text-slate-900 text-sm">
-                      01715983652
+                      +8801711090585
                     </span>
                   </div>
                 </div>

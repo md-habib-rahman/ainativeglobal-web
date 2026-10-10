@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { Play, ChevronLeft, ChevronRight } from "lucide-react";
 
 // Placeholder images for the right-column slider
@@ -46,9 +46,9 @@ export function VideoSliderSection() {
     return () => clearInterval(timer);
   }, [isHovered, slideNext]);
 
-  const sliderVariants = {
+  const slideVariants: Variants = {
     enter: (direction: number) => ({
-      x: direction > 0 ? 100 : -100,
+      x: direction > 0 ? 300 : -300,
       opacity: 0,
     }),
     center: {
@@ -57,7 +57,7 @@ export function VideoSliderSection() {
       transition: { duration: 0.5, ease: "easeOut" },
     },
     exit: (direction: number) => ({
-      x: direction < 0 ? 100 : -100,
+      x: direction > 0 ? -300 : 300,
       opacity: 0,
       transition: { duration: 0.5, ease: "easeIn" },
     }),
@@ -119,7 +119,7 @@ export function VideoSliderSection() {
             ) : (
               /* Active Video Player */
               <video
-                src="https://www.w3schools.com/html/mov_bbb.mp4"
+                src="https://test-streams.mux.dev/x36xhzz/x36.m3u8"
                 controls
                 autoPlay
                 className="w-full h-full object-cover outline-none"
@@ -144,7 +144,7 @@ export function VideoSliderSection() {
                 <motion.div
                   key={currentIndex}
                   custom={direction}
-                  variants={sliderVariants}
+                  variants={slideVariants}
                   initial="enter"
                   animate="center"
                   exit="exit"

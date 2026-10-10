@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 // import { HeroSlideOne } from "./HeroSlideOne";
 
@@ -43,7 +43,7 @@ export function HeroSlider() {
     return () => clearInterval(timer);
   }, [isHovered, slideNext]);
 
-  const slideVariants = {
+  const slideVariants: Variants = {
     enter: (dir: number) => ({
       x: dir > 0 ? "100%" : "-100%",
       opacity: 1,

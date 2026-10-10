@@ -10,6 +10,30 @@ import {
 } from "react-icons/fa6";
 import { NewsletterForm, BackToTopButton } from "./footer/FooterClient";
 
+const socialLinks = [
+  {
+    id: "facebook",
+    icon: FaFacebookF,
+    href: "https://www.facebook.com/share/1GgHupvAvH/",
+  },
+  { id: "twitter", icon: FaXTwitter, href: "https://x.com/AiNativeGlobal" },
+  {
+    id: "linkedin",
+    icon: FaLinkedinIn,
+    href: "https://www.linkedin.com/company/ainative-global/",
+  },
+  {
+    id: "youtube",
+    icon: FaYoutube,
+    href: "https://youtube.com/@ainativeglobal?si=4UfkZYgzsF4MdbfO",
+  },
+  {
+    id: "instagram",
+    icon: FaInstagram,
+    href: "https://www.instagram.com/ainativeglobal?xtok=MXFmZnliOTg4ZTFzaw==",
+  },
+];
+
 // const platformLinks = [
 //   { name: "AI Academy", href: "#" },
 //   { name: "Corporate Training", href: "#" },
@@ -35,13 +59,13 @@ const quickLinks = [
 const recentPosts = [
   {
     title: "10 Essential AI Skills for a Future-Ready Career",
-    date: "8 Jan, 2026",
+    date: "8 Aug, 2026",
     image:
       "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=200&auto=format&fit=crop",
   },
   {
     title: "Top AI Tools to Supercharge Your Productivity",
-    date: "5 Jan, 2026",
+    date: "5 Sep, 2026",
     image:
       "https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=200&auto=format&fit=crop",
   },
@@ -87,43 +111,41 @@ export function Footer() {
               <li className="flex items-center gap-3 text-slate-300 font-sans text-sm">
                 <Phone className="w-4 h-4 text-[#00D4FF]" />
                 <a
-                  href="tel:+8801234567890"
+                  href="tel:+8801711090585"
                   className="hover:text-[#00D4FF] transition-colors"
                 >
-                  +880 1234 567890
+                  +8801711090585
                 </a>
               </li>
               <li className="flex items-center gap-3 text-slate-300 font-sans text-sm">
                 <Mail className="w-4 h-4 text-[#00D4FF]" />
                 <a
-                  href="mailto:hello@ainative.com"
+                  href="mailto:ainativeglobal@gmail.com"
                   className="hover:text-[#00D4FF] transition-colors"
                 >
-                  hello@ainative.com
+                  ainativeglobal@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-3 text-slate-300 font-sans text-sm">
                 <MapPin className="w-4 h-4 text-[#00D4FF]" />
-                <span>Dhaka, Bangladesh</span>
+                <span>
+                  446/B, Love Road, Tejgaon Industrial Area, Dhaka - 1208
+                </span>
               </li>
             </ul>
 
             {/* Social Icons */}
             <div className="flex items-center gap-3 mt-4">
-              {[
-                FaLinkedinIn,
-                FaFacebookF,
-                FaYoutube,
-                FaInstagram,
-                FaXTwitter,
-              ].map((Icon, idx) => (
-                <a
-                  key={idx}
-                  href="#"
+              {socialLinks.map((social) => (
+                <Link
+                  key={social.id}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full border border-slate-700 bg-slate-800/50 flex items-center justify-center text-slate-400 hover:text-[#00D4FF] hover:border-[#00D4FF] hover:bg-[#00D4FF]/10 transition-all duration-300"
                 >
-                  <Icon className="w-4 h-4" />
-                </a>
+                  <social.icon className="w-4 h-4" />
+                </Link>
               ))}
             </div>
           </div>

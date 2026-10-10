@@ -53,7 +53,7 @@ export function VideoGrow() {
         {/* Active Video Player */}
         <video
           ref={videoRef}
-          src="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
+          src="https://test-streams.mux.dev/x36xhzz/x36.m3u8"
           muted
           loop
           playsInline

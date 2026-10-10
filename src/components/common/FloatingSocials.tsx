@@ -13,11 +13,27 @@ import {
 } from "react-icons/fa6";
 
 const socialLinks = [
-  { id: "facebook", icon: FaFacebookF, href: "#" },
-  { id: "twitter", icon: FaXTwitter, href: "#" },
-  { id: "linkedin", icon: FaLinkedinIn, href: "#" },
-  { id: "youtube", icon: FaYoutube, href: "#" },
-  { id: "instagram", icon: FaInstagram, href: "#" },
+  {
+    id: "facebook",
+    icon: FaFacebookF,
+    href: "https://www.facebook.com/share/1GgHupvAvH/",
+  },
+  { id: "twitter", icon: FaXTwitter, href: "https://x.com/AiNativeGlobal" },
+  {
+    id: "linkedin",
+    icon: FaLinkedinIn,
+    href: "https://www.linkedin.com/company/ainative-global/",
+  },
+  {
+    id: "youtube",
+    icon: FaYoutube,
+    href: "https://youtube.com/@ainativeglobal?si=4UfkZYgzsF4MdbfO",
+  },
+  {
+    id: "instagram",
+    icon: FaInstagram,
+    href: "https://www.instagram.com/ainativeglobal?xtok=MXFmZnliOTg4ZTFzaw==",
+  },
 ];
 
 // The brand gradient border configuration

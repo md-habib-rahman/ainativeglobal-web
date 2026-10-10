@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 interface ActionCardProps {
   title: string;
@@ -32,25 +33,30 @@ export function ActionCard({
         className,
       )}
     >
-      <div className="flex items-center gap-4">
-        {/* White Icon Container */}
-        <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-white/20 rounded-xl text-white">
-          {icon}
+      <Link
+        href={`/about#${title.toLowerCase().replace(/\s+/g, "-")}`}
+        className="flex items-center justify-between w-full"
+      >
+        <div className="flex items-center gap-4">
+          {/* White Icon Container */}
+          <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-white/20 rounded-xl text-white">
+            {icon}
+          </div>
+
+          {/* Typography */}
+          <div className="flex flex-col items-start text-left">
+            <span className="font-outfit font-bold text-white text-base md:text-lg leading-tight">
+              {title}
+            </span>
+            <span className="font-sans text-white/80 text-xs md:text-sm font-medium">
+              {subtitle}
+            </span>
+          </div>
         </div>
 
-        {/* Typography */}
-        <div className="flex flex-col items-start text-left">
-          <span className="font-outfit font-bold text-white text-base md:text-lg leading-tight">
-            {title}
-          </span>
-          <span className="font-sans text-white/80 text-xs md:text-sm font-medium">
-            {subtitle}
-          </span>
-        </div>
-      </div>
-
-      {/* Interactive Arrow */}
-      <ArrowRight className="w-5 h-5 text-white transition-transform group-hover:translate-x-1" />
+        {/* Interactive Arrow */}
+        <ArrowRight className="w-5 h-5 text-white transition-transform group-hover:translate-x-1" />
+      </Link>
     </motion.button>
   );
 }

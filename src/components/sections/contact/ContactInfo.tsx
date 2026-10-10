@@ -8,24 +8,28 @@ const infoCards = [
     icon: Mail,
     title: "Chat with us",
     description: "Our friendly team is here to help.",
-    detail: "hello@ainative.com",
+    detail: "ainativeglobal@gmail.com",
     delay: 0,
   },
   {
     icon: MapPin,
     title: "Visit us",
     description: "Come say hello at our HQ.",
-    detail: "Dhaka, Bangladesh",
+    detail: "446/B, Love Road, Tejgaon Industrial Area, Dhaka - 1208",
     delay: 0.2,
   },
   {
     icon: Phone,
     title: "Call us",
-    description: "Mon-Fri from 9am to 6pm.",
-    detail: "+880 1234 567890",
+    description: "Sun-Thu from 10am to 6pm.",
+    detail: "+880 1711 090585",
     delay: 0.4,
   },
 ];
+
+// +8801711090585
+// ainativeglobal@gmail.com
+// 446/B, Love Road, Tejgaon Industrial Area, Dhaka - 1208
 
 export function ContactInfo() {
   return (

@@ -110,6 +110,7 @@ export function AboutZigZag() {
               return (
                 <article
                   key={service.title}
+                  id={`${service.title.toLowerCase().replace(/\s+/g, "-")}`}
                   className={`relative flex flex-col gap-8 lg:items-center lg:gap-20 ${
                     reversed ? "lg:flex-row-reverse" : "lg:flex-row"
                   }`}
